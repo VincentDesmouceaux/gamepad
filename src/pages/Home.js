@@ -7,12 +7,12 @@ const Home = ({ search }) => {
 
   useEffect(() => {
     console.log(
-      `https://api.rawg.io/api/games?key=c23c094efc5643d28c1e1e2d7bd0dab4?name=${search}`
+      `https://api.rawg.io/api/games?name=${search}&key=c23c094efc5643d28c1e1e2d7bd0dab4`
     );
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://api.rawg.io/api/games?key=c23c094efc5643d28c1e1e2d7bd0dab4?name=${search}`
+          `https://api.rawg.io/api/games?name=${search}&key=c23c094efc5643d28c1e1e2d7bd0dab4`
         );
         setData(response.data);
         setIsloading(false);
@@ -40,10 +40,7 @@ const Home = ({ search }) => {
             {data.results.map((game, index) => {
               return (
                 <div className="load-more" key={game.id}>
-                  <img
-                    src={game.thumbnail.path + "." + game.thumbnail.extension}
-                    alt="game"
-                  />
+                  <h1>{game.name}</h1>
                 </div>
               );
             })}
