@@ -36,14 +36,46 @@ const Home = ({ search }) => {
             </div>
             <div className="discover-page__content-header__right"></div>
           </div>
-          <div className="discover-games-list">
-            {data.results.map((game, index) => {
-              return (
-                <div className="load-more" key={game.id}>
-                  <h1>{game.name}</h1>
-                </div>
-              );
-            })}
+          <div className="offer-container">
+            <div className="discover-games-list">
+              {data.results.map((game, index) => {
+                return (
+                  <div className="load-more" key={game.id}>
+                    <div className="discover-columns">
+                      <div className="discover-columns__column">
+                        <div className="game-card-medium">
+                          <div className="game-card-medium__wrapper">
+                            <div className="game-card-medium__media">
+                              <div className="game-card-video">
+                                <img
+                                  className="game-card-video__video"
+                                  src={game.background_image}
+                                  alt="backgroundimage"
+                                />
+                              </div>
+                            </div>
+                            <div className="game-card-medium__info">
+                              <div className="game-card-medium__meta">
+                                <div className="platforms platforms_medium game-card-medium__platforms">
+                                  <div className="platforms__platform platforms__platform_medium platforms__platform_pc"></div>
+                                  <div className="platforms__platform platforms__platform_medium platforms__platform_playstation"></div>
+                                  <div className="platforms__platform platforms__platform_medium platforms__platform_xbox"></div>
+                                </div>
+                                <div class="heading heading_4">
+                                  <p className="game-card-medium__info__name">
+                                    {game.name}
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </main>

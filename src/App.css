@@ -542,3 +542,257 @@ h1 {
   -ms-flex-align: center;
   align-items: center;
 }
+
+.offer-container {
+  display: flex;
+  gap: 30px;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 30px;
+  width: 1280px;
+}
+
+.discover-columns {
+  display: grid;
+  grid-gap: 0 100px;
+  grid-template-columns: repeat(1, 900px);
+}
+
+.discover-columns {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.game-card-medium__wrapper {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.game-card-medium__wrapper {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #202020;
+  border-radius: 12px;
+  -webkit-box-shadow: 0 10px 20px 0 rgb(0 0 0 / 7%);
+  box-shadow: 0 10px 20px 0 rgb(0 0 0 / 7%);
+  overflow: hidden;
+}
+
+.game-card-medium__media {
+  width: 100%;
+  overflow: hidden;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.game-card-video {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.game-card-video__video {
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+video {
+  object-fit: contain;
+}
+
+.game-card-medium__info {
+  padding: 16px 16px 24px;
+}
+
+.game-card-medium__meta,
+.game-card-medium__meta .platforms {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.game-card-medium__meta {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  margin-bottom: 7px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: start;
+}
+
+.game-card-medium__meta .platforms {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -ms-flex-pack: start;
+}
+
+.game-card-medium__meta,
+.game-card-medium__meta .platforms {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.platforms {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.platforms_medium .platforms__platform:not(:last-child) {
+  margin-right: 6px;
+}
+.platforms__platform:not(:last-child) {
+  margin-right: 10px;
+}
+.platforms__platform_pc.platforms__platform_medium {
+  width: 12px;
+  height: 13px;
+}
+.platforms__platform_pc {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PScwIDAgMTYgMTYnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTAgMTMuNzcybDYuNTQ1LjkwMlY4LjQyNkgwek0wIDcuNjJoNi41NDVWMS4yOTZMMCAyLjE5OHptNy4yNjUgNy4xNWw4LjcwNCAxLjJWOC40MjVINy4yNjV6bTAtMTMuNTd2Ni40Mmg4LjcwNFYweicgZmlsbD0nI0ZGRicvPjwvc3ZnPg==);
+}
+.game-card-medium__platforms .platforms__platform {
+  height: 12px;
+}
+
+.platforms__platform {
+  line-height: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: contain;
+}
+
+.platforms_medium .platforms__platform:not(:last-child) {
+  margin-right: 6px;
+}
+
+.platforms__platform:not(:last-child) {
+  margin-right: 10px;
+}
+
+.platforms__platform_playstation.platforms__platform_medium {
+  width: 17px;
+  height: 13px;
+}
+
+.game-card-medium__platforms .platforms__platform {
+  height: 12px;
+}
+
+.platforms__platform_playstation {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PScwIDAgMjEgMTYnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTExLjExMiAxNkw4IDE0LjY1NFYwczYuNzY0IDEuMTQ3IDcuNjk1IDMuOTg3Yy45MzEgMi44NDItLjUyIDQuNjgyLTEuMDMgNC43MzYtMS40Mi4xNS0xLjk2LS43NDgtMS45Ni0uNzQ4VjMuMzlsLTEuNTQ0LS42NDhMMTEuMTEyIDE2ek0xMiAxNC4zMlYxNnM3LjY2Ni0yLjMzOCA4Ljc5NC0zLjI0YzEuMTI4LS45LTIuNjQxLTMuMTQyLTQuNjY2LTIuNzA0IDAgMC0yLjE1Mi4wOTktNC4xMDIuOTAxLS4wMTkuMDA4IDAgMS41MSAwIDEuNTFsNC45NDgtMS4wOTUgMS43NDMuNzNMMTIgMTQuMzJ6bS01LjAyNC0uNzczcy0uOTQyLjQ3Ni0zLjA0MS40NTJjLTIuMS0uMDI0LTMuOTU5LS41OTUtMy45MzUtMS44MzNDLjAyNCAxMC45MjggMy40NzYgOS41NzEgNi45NTIgOXYxLjczOGwtMy42OTMuOTUycy0uNjMyLjc4Ni4yMTcuODFBMTEuOTM0IDExLjkzNCAwIDAwNyAxMi4wNDZsLS4wMjQgMS41eicgZmlsbD0nI0ZGRicvPjwvc3ZnPg==);
+}
+
+.platforms__platform {
+  line-height: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: contain;
+}
+
+.platforms__platform_xbox.platforms__platform_medium {
+  width: 13px;
+  height: 13px;
+}
+.game-card-medium__platforms .platforms__platform {
+  height: 12px;
+}
+
+.platforms__platform_xbox {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxNiAxNic+PHBhdGggZmlsbD0nI0ZGRicgZD0nTTMuNTY0IDEuMzU3bC0uMDIyLjAyYy4wNDYtLjA0OC4xMS0uMS4xNTQtLjEyOEM0Ljk0OC40MzUgNi4zOTYgMCA4IDBjMS41MDIgMCAyLjkwOC40MTUgNC4xMSAxLjEzNi4wODYuMDUyLjMyNC4yMTUuNDQ2LjM2M0MxMS40LjIyMiA3Ljk5MyAyLjk2MiA3Ljk5MyAyLjk2MmMtMS4xNzctLjkwOC0yLjI2LTEuNTI2LTMuMDY3LTEuNzQ2LS42NzQtLjE4NS0xLjE0LS4wMy0xLjM2Mi4xNDF6bTEwLjMwNSAxLjIwOGMtLjAzNS0uMDQtLjA3NC0uMDc2LS4xMDktLjExNi0uMjkzLS4zMjItLjY1My0uNC0uOTc4LS4zNzgtLjI5NS4wOTItMS42Ni41ODQtMy4zNDIgMi4xNzIgMCAwIDEuODk0IDEuODQxIDMuMDUzIDMuNzIzIDEuMTU5IDEuODgzIDEuODUyIDMuMzYyIDEuNDI2IDUuNDE1QTcuOTY5IDcuOTY5IDAgMDAxNiA3Ljk5OWE3Ljk2OCA3Ljk2OCAwIDAwLTIuMTMtNS40MzR6TTEwLjk4IDguNzdhNTUuNDE2IDU1LjQxNiAwIDAwLTIuMjg3LTIuNDA1IDUyLjg0IDUyLjg0IDAgMDAtLjctLjY4NmwtLjg0OC44NTRjLS42MTQuNjItMS40MTEgMS40My0xLjg1MyAxLjkwMi0uNzg3Ljg0LTMuMDQzIDMuNDc5LTMuMTcgNC45NTggMCAwLS41MDItMS4xNzQuNi0zLjg4LjcyLTEuNzY5IDIuODkzLTQuNDI1IDMuODAxLTUuMjkgMCAwLS44My0uOTEzLTEuODctMS41NDRsLS4wMDctLjAwMnMtLjAxMS0uMDA5LS4wMy0uMDJjLS41LS4zLTEuMDQ3LS41My0xLjU3My0uNTZhMS4zOTEgMS4zOTEgMCAwMC0uODc4LjQzMUE4IDggMCAwMDEzLjkyIDEzLjM4MWMwLS4wMDItLjE2OS0xLjA1Ni0xLjI0NS0yLjU3LS4yNTMtLjM1NC0xLjE3OC0xLjQ2LTEuNjk2LTIuMDR6Jy8+PC9zdmc+);
+}
+
+.platforms__platform {
+  line-height: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: contain;
+}
+
+.game-card-medium__info .heading {
+  margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-bottom: 2px;
+}
+
+.game-card-medium__wrapper .heading {
+  font-weight: 700;
+}
+
+.heading_4 {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.heading {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 48px 0 24px;
+  color: #fff;
+}
+.game-card-medium__info__name {
+  background-image: none;
+}
+
+p {
+  background-image: linear-gradient(
+    0deg,
+    hsla(0, 0%, 100%, 0) 0,
+    hsla(0, 0%, 100%, 0.4) 0,
+    hsla(0, 0%, 100%, 0.4) 1px,
+    hsla(0, 0%, 100%, 0) 0
+  );
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
