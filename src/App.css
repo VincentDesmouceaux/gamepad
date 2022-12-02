@@ -685,8 +685,8 @@ video {
   margin-right: 10px;
 }
 .platforms__platform_pc.platforms__platform_medium {
-  width: 12px;
-  height: 13px;
+  width: 30px;
+  height: 30px;
 }
 .platforms__platform_pc {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PScwIDAgMTYgMTYnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTAgMTMuNzcybDYuNTQ1LjkwMlY4LjQyNkgwek0wIDcuNjJoNi41NDVWMS4yOTZMMCAyLjE5OHptNy4yNjUgNy4xNWw4LjcwNCAxLjJWOC40MjVINy4yNjV6bTAtMTMuNTd2Ni40Mmg4LjcwNFYweicgZmlsbD0nI0ZGRicvPjwvc3ZnPg==);
@@ -713,12 +713,12 @@ video {
 }
 
 .platforms__platform_playstation.platforms__platform_medium {
-  width: 17px;
-  height: 13px;
+  width: 30px;
+  height: 30px;
 }
 
 .game-card-medium__platforms .platforms__platform {
-  height: 12px;
+  height: 30px;
 }
 
 .platforms__platform_playstation {
@@ -735,8 +735,8 @@ video {
 }
 
 .platforms__platform_xbox.platforms__platform_medium {
-  width: 13px;
-  height: 13px;
+  width: 30px;
+  height: 30px;
 }
 .game-card-medium__platforms .platforms__platform {
   height: 12px;
@@ -767,7 +767,7 @@ video {
 }
 
 .heading_4 {
-  font-size: 24px;
+  font-size: 40px;
   line-height: 28px;
   font-weight: 700;
   margin: 0;
@@ -795,4 +795,14 @@ p {
   text-decoration: none;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
+}
+
+.release {
+  font-size: 20px;
+  font-weight: 200;
+  text-decoration: none;
+}
+
+.h5 {
+  font-weight: 500;
 }

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Home = ({ search }) => {
   const [data, setData] = useState();
@@ -7,12 +8,12 @@ const Home = ({ search }) => {
 
   useEffect(() => {
     console.log(
-      `https://api.rawg.io/api/games?name=${search}&key=c23c094efc5643d28c1e1e2d7bd0dab4`
+      `https://api.rawg.io/api/games?search=${search}&key=c23c094efc5643d28c1e1e2d7bd0dab4`
     );
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://api.rawg.io/api/games?name=${search}&key=c23c094efc5643d28c1e1e2d7bd0dab4`
+          `https://api.rawg.io/api/games?search=${search}&key=c23c094efc5643d28c1e1e2d7bd0dab4`
         );
         setData(response.data);
         setIsloading(false);
@@ -40,31 +41,39 @@ const Home = ({ search }) => {
             <div className="discover-games-list">
               {data.results.map((game, index) => {
                 return (
-                  <div className="load-more" key={game.id}>
-                    <div className="discover-columns">
-                      <div className="discover-columns__column">
-                        <div className="game-card-medium">
-                          <div className="game-card-medium__wrapper">
-                            <div className="game-card-medium__media">
-                              <div className="game-card-video">
-                                <img
-                                  className="game-card-video__video"
-                                  src={game.background_image}
-                                  alt="backgroundimage"
-                                />
-                              </div>
-                            </div>
-                            <div className="game-card-medium__info">
-                              <div className="game-card-medium__meta">
-                                <div className="platforms platforms_medium game-card-medium__platforms">
-                                  <div className="platforms__platform platforms__platform_medium platforms__platform_pc"></div>
-                                  <div className="platforms__platform platforms__platform_medium platforms__platform_playstation"></div>
-                                  <div className="platforms__platform platforms__platform_medium platforms__platform_xbox"></div>
+                  <Link to={`/gamedetails/${game.id}`} key={index}>
+                    <div className="load-more">
+                      <div className="discover-columns">
+                        <div className="discover-columns__column">
+                          <div className="game-card-medium">
+                            <div className="game-card-medium__wrapper">
+                              <div className="game-card-medium__media">
+                                <div className="game-card-video">
+                                  <img
+                                    className="game-card-video__video"
+                                    src={game.background_image}
+                                    alt="backgroundimage"
+                                  />
                                 </div>
-                                <div class="heading heading_4">
-                                  <p className="game-card-medium__info__name">
-                                    {game.name}
-                                  </p>
+                              </div>
+                              <div className="game-card-medium__info">
+                                <div className="game-card-medium__meta">
+                                  <div className="platforms platforms_medium game-card-medium__platforms">
+                                    <div className="platforms__platform platforms__platform_medium platforms__platform_pc"></div>
+                                    <div className="platforms__platform platforms__platform_medium platforms__platform_playstation"></div>
+                                    <div className="platforms__platform platforms__platform_medium platforms__platform_xbox"></div>
+                                  </div>
+                                  <div className="heading heading_4">
+                                    <div className="game-card-medium__info__name">
+                                      {game.name}
+                                    </div>
+                                    <div className="release">
+                                      Release date : {game.released}
+                                      <div className="h5">
+                                        Rating : {game.rating}
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -72,7 +81,7 @@ const Home = ({ search }) => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 );
               })}
             </div>
