@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Header = ({ search, setSearch }) => {
+const Header = ({ search, setSearch, token, handleToken }) => {
   return (
     <header>
       <div className="header page__header">
@@ -28,12 +28,26 @@ const Header = ({ search, setSearch }) => {
             </div>
           </div>
           <div className="header__item">
-            <Link to={`/login`} className="header__item-link ">
-              LOG IN
-            </Link>
-            <Link to={`/SignUp`} className="header__item-link ">
-              SIGN UP
-            </Link>
+            {token ? (
+              <Link
+                to={`/login`}
+                className="header__item-link "
+                onClick={() => {
+                  handleToken(null);
+                }}
+              >
+                LOG OUT
+              </Link>
+            ) : (
+              <>
+                <Link to={`/login`} className="header__item-link ">
+                  LOG IN
+                </Link>
+                <Link to={`/SignUp`} className="header__item-link ">
+                  SIGN UP
+                </Link>
+              </>
+            )}
             <div className="header__item-link "> API </div>
             <div className="header-menu">...</div>
           </div>

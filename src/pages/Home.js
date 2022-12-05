@@ -33,7 +33,7 @@ const Home = ({ search }) => {
         <div className="discover-page__content">
           <div className="discover-page__content-header">
             <div className="discover-page__content-header__left">
-              <h1 className="heading heading_1">Jeux du moment</h1>
+              <h1 className="heading heading_1">Games of the moment</h1>
             </div>
             <div className="discover-page__content-header__right"></div>
           </div>
