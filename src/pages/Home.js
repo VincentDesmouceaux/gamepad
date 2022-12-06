@@ -45,7 +45,7 @@ const Home = ({ search }) => {
                         <div className="select-button__content">
                           Order by :
                           <span className="discover-filter-button__value">
-                            Raiting
+                            Rating
                           </span>
                         </div>
                       </button>
