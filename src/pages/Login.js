@@ -77,14 +77,42 @@ const Login = ({ handleToken }) => {
                       setPassword(event.target.value);
                     }}
                   />
+                  <div className="input__error">
+                    <span className="error error_field">{errorMessage}</span>
+                  </div>
                 </div>
-                <button
-                  className="button button_fill button_medium"
-                  type="submit"
-                >
-                  Log in
-                </button>
+                <div className="decalage">
+                  <button
+                    className="button button_fill button_medium"
+                    type="submit"
+                  >
+                    Log in
+                  </button>
+                </div>
               </form>
+              <div className="page__additional">
+                <Link to={`/signup `}>Don't have an account? Sign up.</Link>
+                <Link>
+                  <span>Forgot your password?</span>
+                </Link>
+              </div>
+            </div>
+            <div className="page__info">
+              <div>
+                <h3>
+                  <span>You can use social accounts to sign up :</span>
+                </h3>
+              </div>
+              <div>
+                <div className="social-accounts-auth-block">
+                  <div className="social-accounts-auth-block__link social-accounts-auth-block__link_facebook">
+                    <span className="">Continue with Facebook</span>
+                  </div>
+                  <div className="social-accounts-auth-block__link social-accounts-auth-block__link_twitter">
+                    <span className="">Continue with Twitter</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </main>

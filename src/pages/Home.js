@@ -7,13 +7,11 @@ const Home = ({ search }) => {
   const [isLoading, setIsloading] = useState(true);
 
   useEffect(() => {
-    console.log(
-      `https://api.rawg.io/api/games?search=${search}&key=c23c094efc5643d28c1e1e2d7bd0dab4`
-    );
+    console.log(`http://localhost:4000/games?search=${search}`);
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://api.rawg.io/api/games?search=${search}&key=c23c094efc5643d28c1e1e2d7bd0dab4`
+          `http://localhost:4000/games?search=${search}`
         );
         setData(response.data);
         setIsloading(false);

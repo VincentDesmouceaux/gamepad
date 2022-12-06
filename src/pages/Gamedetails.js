@@ -15,7 +15,7 @@ const Gamedetails = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://api.rawg.io/api/games/${id}?key=c23c094efc5643d28c1e1e2d7bd0dab4`
+          `http://localhost:4000/gamedetails/${id}`
         );
         setData(response.data);
         setIsLoading(false);
