@@ -35,6 +35,34 @@ const Home = ({ search }) => {
             </div>
             <div className="discover-page__content-header__right"></div>
           </div>
+          <div className="discover-games-list__controls">
+            <div className="discover-games-list__controls__left">
+              <div className="discover-filter">
+                <div className="discover-filter__selects">
+                  <div className="dropdown discover-filter__select">
+                    <div div className="dropdown__button">
+                      <button className="button button_inline select-button discover-filter-button select-button_inline">
+                        <div className="select-button__content">
+                          Order by :
+                          <span className="discover-filter-button__value">
+                            Raiting
+                          </span>
+                        </div>
+                      </button>
+                      <button className="button button_inline select-button discover-filter-button select-button_inline">
+                        <div className="select-button__content">
+                          Order by :
+                          <span className="discover-filter-button__value">
+                            Release date
+                          </span>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="offer-container">
             <div className="discover-games-list">
               {data.results.map((game, index) => {
@@ -70,13 +98,19 @@ const Home = ({ search }) => {
                                       <div className="h5">
                                         Rating : {game.rating}
                                       </div>
-                                      {data.genres.map((genre, index) => {
-                                        return (
-                                          <div className="h6" key={index}>
-                                            Genres : {genre.name}
-                                          </div>
-                                        );
-                                      })}
+                                      <div className="genreflex">
+                                        <div className="genres"> Genres :</div>
+                                        {game.genres.map((genre, index) => {
+                                          return (
+                                            <span
+                                              className="game-card-about__desription"
+                                              key={index}
+                                            >
+                                              {genre.name}
+                                            </span>
+                                          );
+                                        })}
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
