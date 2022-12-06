@@ -70,6 +70,13 @@ const Home = ({ search }) => {
                                       <div className="h5">
                                         Rating : {game.rating}
                                       </div>
+                                      {data.genres.map((genre, index) => {
+                                        return (
+                                          <div className="h6" key={index}>
+                                            Genres : {genre.name}
+                                          </div>
+                                        );
+                                      })}
                                     </div>
                                   </div>
                                 </div>
