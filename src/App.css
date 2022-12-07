@@ -504,11 +504,10 @@ h1 {
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
-  margin-bottom: 16px;
+  /* margin-bottom: 16px; */
 }
 
 .discover-games-list {
-  margin-top: 16px;
   margin-bottom: 16px;
 }
 
@@ -2003,7 +2002,6 @@ h3 {
   -ms-flex-align: center;
   align-items: center;
   height: 55px;
-  padding-left: 190px;
 }
 
 .dropdown__button {
@@ -2020,7 +2018,6 @@ h3 {
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
-  gap: 20px;
 }
 .genreflex {
   display: flex;
@@ -2041,7 +2038,7 @@ h3 {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-right: 8px;
+  margin-right: 10px;
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -2062,6 +2059,7 @@ h3 {
 .dropdown {
   position: relative;
   overflow-y: hidden;
+  cursor: pointer;
 }
 
 .dropdown__button {
@@ -2078,6 +2076,7 @@ h3 {
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
+  cursor: pointer;
 }
 
 .discover-filter-button {
@@ -2086,7 +2085,7 @@ h3 {
   padding: 10px 16px;
   background-color: hsla(0, 0%, 100%, 0.07);
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 20px;
   color: #fff;
 }
 
@@ -2103,8 +2102,10 @@ h3 {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 100%;
+  width: 50%;
   height: 100%;
+  gap: 10px;
+  font-size: 15px;
 }
 
 .discover-filter-button .select-button__title {
@@ -2146,4 +2147,16 @@ h3 {
   font-family: inherit;
   cursor: pointer;
   -webkit-appearance: none;
+}
+
+.selectfilter {
+  padding-right: 30px;
+  margin-inline-start: 30px;
+  font-size: larger;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.Dropdown-arrow-wrapper {
+  padding-left: 20px;
 }

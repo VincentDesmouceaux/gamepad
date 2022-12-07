@@ -2,13 +2,16 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Dropdown from "react-dropdown";
-import "react-dropdown/style.css";
 
 const Home = ({ search }) => {
   const [data, setData] = useState();
   const [isLoading, setIsloading] = useState(true);
   const [ordering, setOrdering] = useState("");
-  const options = ["one", "two", "three"];
+  const options = [
+    { value: "one", label: "Rating", className: ".rating" },
+    { value: "two", label: "Release date", className: ".rating" },
+    { value: "two", label: "No filters", className: ".filters" },
+  ];
   const defaultOption = options[0];
 
   useEffect(() => {
@@ -43,9 +46,20 @@ const Home = ({ search }) => {
             <div className="discover-games-list__controls__left">
               <div className="discover-filter">
                 <div className="discover-filter__selects">
-                  <div className="dropdown discover-filter__select">
-                    <div className="dropdown__button">
-                      <button
+                  <span className="selectfilter">Order by :</span>
+                  <Dropdown
+                    className="dropdown discover-filter__select"
+                    controlClassName="dropdown__button"
+                    placeholderClassName="button button_inline select-button discover-filter-button select-button_inline"
+                    menuClassName="select-button__content"
+                    options={options}
+                    onChange={(event) => {
+                      console.log(event.value);
+                    }}
+                    value={defaultOption}
+                    placeholder="Select an option"
+                  />
+                  {/* <button
                         className="button button_inline select-button discover-filter-button select-button_inline"
                         onClick={() => {
                           setOrdering("rating");
@@ -82,9 +96,7 @@ const Home = ({ search }) => {
                             Filters Off
                           </span>
                         </div>
-                      </button>
-                    </div>
-                  </div>
+                      </button> */}
                 </div>
               </div>
             </div>
