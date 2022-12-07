@@ -48,7 +48,9 @@ const Header = ({ search, setSearch, token, handleToken }) => {
                 </Link>
               </>
             )}
-            <div className="header__item-link "> API </div>
+            <Link to={`/mygames`} className="header__item-link ">
+              My Games
+            </Link>
             <div className="header-menu">...</div>
           </div>
         </div>

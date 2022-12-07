@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import Gamedetails from "./pages/Gamedetails";
+import Mygames from "./pages/Mygames";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -36,6 +37,7 @@ function App() {
         <Route path="/login" element={<Login handleToken={handleToken} />} />
         <Route path="/signup" element={<SignUp handleToken={handleToken} />} />
         <Route path="/gamedetails/:id" element={<Gamedetails />} />
+        <Route path="/mygames" element={<Mygames />} />
       </Routes>
     </Router>
   );

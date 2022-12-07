@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 const Home = ({ search }) => {
   const [data, setData] = useState();
   const [isLoading, setIsloading] = useState(true);
+  const [ordering, setOrdering] = useState("");
 
   useEffect(() => {
-    console.log(`http://localhost:4000/games?search=${search}`);
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:4000/games?search=${search}`
+          `http://localhost:4000/games?search=${search}&ordering=${ordering}`
         );
         setData(response.data);
         setIsloading(false);
@@ -20,7 +20,7 @@ const Home = ({ search }) => {
       }
     };
     fetchData();
-  }, [search]);
+  }, [search, ordering]);
 
   return isLoading ? (
     <p>Loading...</p>
@@ -40,8 +40,13 @@ const Home = ({ search }) => {
               <div className="discover-filter">
                 <div className="discover-filter__selects">
                   <div className="dropdown discover-filter__select">
-                    <div div className="dropdown__button">
-                      <button className="button button_inline select-button discover-filter-button select-button_inline">
+                    <div className="dropdown__button">
+                      <button
+                        className="button button_inline select-button discover-filter-button select-button_inline"
+                        onClick={() => {
+                          setOrdering("rating");
+                        }}
+                      >
                         <div className="select-button__content">
                           Order by :
                           <span className="discover-filter-button__value">
@@ -49,11 +54,28 @@ const Home = ({ search }) => {
                           </span>
                         </div>
                       </button>
-                      <button className="button button_inline select-button discover-filter-button select-button_inline">
+                      <button
+                        className="button button_inline select-button discover-filter-button select-button_inline"
+                        onClick={() => {
+                          setOrdering("released");
+                        }}
+                      >
                         <div className="select-button__content">
                           Order by :
                           <span className="discover-filter-button__value">
                             Release date
+                          </span>
+                        </div>
+                      </button>
+                      <button
+                        className="button button_inline select-button discover-filter-button select-button_inline"
+                        onClick={() => {
+                          setOrdering(null);
+                        }}
+                      >
+                        <div className="select-button__content">
+                          <span className="discover-filter-button__value-colors">
+                            Filters Off
                           </span>
                         </div>
                       </button>

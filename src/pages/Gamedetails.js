@@ -55,7 +55,9 @@ const Gamedetails = () => {
                   </div>
                 </div>
                 <div className="game-buttons-new game__buttons">
-                  <button>Add to my game</button>
+                  <button className="button-button_fill-button_medium-color">
+                    Add to my game
+                  </button>
                 </div>
                 <div className="rating-chart ">
                   <div className="rating-chart__chart rating-chart__chart_rating">
