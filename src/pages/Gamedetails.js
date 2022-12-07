@@ -1,14 +1,15 @@
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 
 import { useState, useEffect } from "react";
 
 import axios from "axios";
 
 const Gamedetails = () => {
+  const { id } = useParams();
+  const location = useLocation();
+  // console.log(location.state.screenshots);
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
-
-  const { id } = useParams();
 
   useEffect(() => {
     console.log(id);
@@ -92,6 +93,19 @@ const Gamedetails = () => {
                       </div>
                     </div>
                     <div className="game__screenshots-list">
+                      {location.state.screenshots.map((image, index) => {
+                        console.log(image);
+                        return (
+                          <div className="game__screenshots-item">
+                            <img
+                              key={index}
+                              src={image.image}
+                              className="responsive-image game__screenshot-image"
+                            />
+                            ;
+                          </div>
+                        );
+                      })}
                       <div className="game__screenshots-item">
                         <img
                           src={data.background_image_additional}

@@ -1457,13 +1457,14 @@ h2 {
 
 .game__screenshots-item {
   position: relative;
-  margin-top: 16px;
+  margin-top: 15px;
   width: 184px;
   height: 102px;
   border-radius: 6px;
   background: hsla(0, 0%, 100%, 0.05);
   cursor: pointer;
   overflow: hidden;
+  margin-right: 8px;
 }
 
 img.game__screenshot-image {

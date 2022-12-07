@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Dropdown from "react-dropdown";
+import "react-dropdown/style.css";
 
 const Home = ({ search }) => {
   const [data, setData] = useState();
   const [isLoading, setIsloading] = useState(true);
   const [ordering, setOrdering] = useState("");
+  const options = ["one", "two", "three"];
+  const defaultOption = options[0];
 
   useEffect(() => {
     const fetchData = async () => {
@@ -89,7 +93,11 @@ const Home = ({ search }) => {
             <div className="discover-games-list">
               {data.results.map((game, index) => {
                 return (
-                  <Link to={`/gamedetails/${game.id}`} key={index}>
+                  <Link
+                    to={`/gamedetails/${game.id}`}
+                    state={{ screenshots: game.short_screenshots }}
+                    key={index}
+                  >
                     <div className="load-more">
                       <div className="discover-columns">
                         <div className="discover-columns__column">
