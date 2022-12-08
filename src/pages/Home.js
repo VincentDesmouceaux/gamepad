@@ -2,15 +2,16 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Dropdown from "react-dropdown";
+// import "react-dropdown/style.css";
 
 const Home = ({ search }) => {
   const [data, setData] = useState();
   const [isLoading, setIsloading] = useState(true);
   const [ordering, setOrdering] = useState("");
   const options = [
-    { value: "one", label: "Rating", className: ".rating" },
-    { value: "two", label: "Release date", className: ".rating" },
-    { value: "two", label: "No filters", className: ".filters" },
+    { value: "rating", className: ".rating", label: "Rating" },
+    { value: "released", className: ".rating", label: "Release date" },
+    { value: null, className: ".filters", label: "No filters" },
   ];
   const defaultOption = options[0];
 
@@ -40,7 +41,6 @@ const Home = ({ search }) => {
             <div className="discover-page__content-header__left">
               <h1 className="heading heading_1">Games of the moment</h1>
             </div>
-            <div className="discover-page__content-header__right"></div>
           </div>
           <div className="discover-games-list__controls">
             <div className="discover-games-list__controls__left">
@@ -51,52 +51,14 @@ const Home = ({ search }) => {
                     className="dropdown discover-filter__select"
                     controlClassName="dropdown__button"
                     placeholderClassName="button button_inline select-button discover-filter-button select-button_inline"
-                    menuClassName="select-button__content"
+                    menuClassName="select-button__title"
                     options={options}
                     onChange={(event) => {
-                      console.log(event.value);
+                      setOrdering(event.value);
                     }}
-                    value={defaultOption}
-                    placeholder="Select an option"
+                    value={ordering}
+                    placeholder="--"
                   />
-                  {/* <button
-                        className="button button_inline select-button discover-filter-button select-button_inline"
-                        onClick={() => {
-                          setOrdering("rating");
-                        }}
-                      >
-                        <div className="select-button__content">
-                          Order by :
-                          <span className="discover-filter-button__value">
-                            Rating
-                          </span>
-                        </div>
-                      </button>
-                      <button
-                        className="button button_inline select-button discover-filter-button select-button_inline"
-                        onClick={() => {
-                          setOrdering("released");
-                        }}
-                      >
-                        <div className="select-button__content">
-                          Order by :
-                          <span className="discover-filter-button__value">
-                            Release date
-                          </span>
-                        </div>
-                      </button>
-                      <button
-                        className="button button_inline select-button discover-filter-button select-button_inline"
-                        onClick={() => {
-                          setOrdering(null);
-                        }}
-                      >
-                        <div className="select-button__content">
-                          <span className="discover-filter-button__value-colors">
-                            Filters Off
-                          </span>
-                        </div>
-                      </button> */}
                 </div>
               </div>
             </div>

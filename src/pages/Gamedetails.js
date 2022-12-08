@@ -50,7 +50,7 @@ const Gamedetails = () => {
                     <div className="game__meta-playtime">
                       Average Playtime: {data.playtime} hours
                     </div>
-                    <h1 className="heading heading_1 game__title">
+                    <h1 className="heading heading_12 game__title">
                       {data.name_original}
                     </h1>
                   </div>
