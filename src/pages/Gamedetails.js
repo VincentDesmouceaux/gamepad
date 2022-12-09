@@ -12,15 +12,13 @@ const Gamedetails = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    console.log(id);
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:4000/gamedetails/${id}`
+          `https://site--gamepad-backend--c7br8w6v87r6.code.run/gamedetails/${id}`
         );
         setData(response.data);
         setIsLoading(false);
-        console.log(response.data);
       } catch (error) {
         console.log(error);
       }
@@ -94,12 +92,11 @@ const Gamedetails = () => {
                     </div>
                     <div className="game__screenshots-list">
                       {location.state.screenshots.map((image, index) => {
-                        console.log(image);
                         return (
-                          <div className="game__screenshots-item">
+                          <div className="game__screenshots-item" key={index}>
                             <img
-                              key={index}
                               src={image.image}
+                              alt="screenshots"
                               className="responsive-image game__screenshot-image"
                             />
                             ;
@@ -109,10 +106,34 @@ const Gamedetails = () => {
                       <div className="game__screenshots-item">
                         <img
                           src={data.background_image_additional}
-                          alt=""
+                          alt="additional"
                           className="responsive-image game__screenshot-image"
                         />
                       </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="content content_columns-1">
+              <div className="game__suggestions">
+                <div className="suggestions"></div>
+                <h2 className="heading heading_2 game__suggestions-heading-h">
+                  Games like :<span> {data.name_original}</span>
+                </h2>
+                <div className="game__suggestions-games">
+                  <div className="load-more">
+                    <div className="discover-columns__column">
+                      {data.stores.map((elem, indexes) => {
+                        return (
+                          <img
+                            className="videohelp"
+                            key={indexes}
+                            src={elem.store.image_background}
+                            alt="aditionalgame"
+                          />
+                        );
+                      })}
                     </div>
                   </div>
                 </div>

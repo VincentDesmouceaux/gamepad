@@ -13,13 +13,12 @@ const Home = ({ search }) => {
     { value: "released", className: ".rating", label: "Release date" },
     { value: null, className: ".filters", label: "No filters" },
   ];
-  const defaultOption = options[0];
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:4000/games?search=${search}&ordering=${ordering}`
+          `https://site--gamepad-backend--c7br8w6v87r6.code.run/games?search=${search}&ordering=${ordering}`
         );
         setData(response.data);
         setIsloading(false);
@@ -72,7 +71,7 @@ const Home = ({ search }) => {
                     state={{ screenshots: game.short_screenshots }}
                     key={index}
                   >
-                    <div className="load-more">
+                    <div className="load-more-margin">
                       <div className="discover-columns">
                         <div className="discover-columns__column">
                           <div className="game-card-medium">

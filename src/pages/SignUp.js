@@ -18,11 +18,14 @@ const Signup = ({ handleToken }) => {
 
       setErrorMessage("");
 
-      const response = await axios.post("http://localhost:4000/user/signup", {
-        email: email,
-        username: username,
-        password: password,
-      });
+      const response = await axios.post(
+        "https://site--gamepad-backend--c7br8w6v87r6.code.run/user/signup",
+        {
+          email: email,
+          username: username,
+          password: password,
+        }
+      );
       console.log(response.data);
 
       if (response.data.token) {
@@ -55,7 +58,7 @@ const Signup = ({ handleToken }) => {
   return (
     <div className="page page_secondary">
       <div className="page__content-wrap-centerer">
-        <div className="page__content-wrap">
+        <div className="page__content-wrap-signin">
           <main className="page__content">
             <div className="content content_columns-1-2 content_position-center content_fullsize">
               <div className="page__form">
