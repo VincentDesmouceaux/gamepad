@@ -2408,8 +2408,8 @@ h2 {
   }
 
   .align {
-    margin: 10 auto;
-    max-width: 500px min-content;
+    margin: 20px auto;
+    max-width: min-content;
   }
 
   .heading_12 {
