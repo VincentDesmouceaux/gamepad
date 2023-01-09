@@ -2398,4 +2398,24 @@ h2 {
     -webkit-justify-content: flex-start;
     justify-content: flex-start;
   }
+
+  .game-content-columns {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .align {
+    margin: 0 auto;
+    max-width: min-content;
+  }
+
+  .heading_12 {
+    font-size: 30px;
+    line-height: 74px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
 }
