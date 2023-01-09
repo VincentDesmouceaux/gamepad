@@ -2381,7 +2381,7 @@ h2 {
     -ms-flex-align: center;
     align-items: center;
     -ms-flex-pack: start; */
-    margin-right: 250px;
+    margin-right: 200px;
   }
 
   .game-card-medium__meta .platforms {
@@ -2408,8 +2408,8 @@ h2 {
   }
 
   .align {
-    margin: 0 auto;
-    max-width: min-content;
+    margin: 10 auto;
+    max-width: 500px min-content;
   }
 
   .heading_12 {
