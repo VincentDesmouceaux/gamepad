@@ -2409,7 +2409,7 @@ h2 {
 
   .align {
     margin: 20px auto;
-    max-width: min-content;
+    max-width: 200px min-content;
   }
 
   .heading_12 {
