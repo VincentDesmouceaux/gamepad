@@ -59,52 +59,39 @@ const Signup = ({ handleToken }) => {
     <div className="page page_secondary">
       <div className="page__content-wrap-centerer">
         <div className="page__content-wrap-signin">
-          <main className="page__content">
-            <div className="content content_columns-1-2 content_position-center content_fullsize">
-              <div className="page__form">
-                <h2>Sign Up</h2>
+          <div className="page__content2">
+            <main className="page__content">
+              <div className="content content_columns-1-2 content_position-center content_fullsize">
+                <div className="page__form">
+                  <h2>Sign Up</h2>
 
-                <form onSubmit={handleSubmit}>
-                  <div className="input">
-                    <input
-                      className="input__field"
-                      type="email"
-                      name="email"
-                      placeholder="Email"
-                      value={email}
-                      onChange={(event) => {
-                        setEmail(event.target.value);
-                      }}
-                    />
-                    <div className="input__error">
-                      <span className="error error_field">{errorMessage2}</span>
+                  <form onSubmit={handleSubmit}>
+                    <div className="input">
+                      <input
+                        className="input__field"
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                        value={email}
+                        onChange={(event) => {
+                          setEmail(event.target.value);
+                        }}
+                      />
+                      <div className="input__error">
+                        <span className="error error_field">
+                          {errorMessage2}
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                  <div className="input">
-                    <input
-                      className="input__field"
-                      type="text"
-                      name="username"
-                      placeholder="Username"
-                      value={username}
-                      onChange={(event) => {
-                        setUsername(event.target.value);
-                      }}
-                    />
-                    <div className="input__error">
-                      <span className="error error_field">{errorMessage}</span>
-                    </div>
-                  </div>
-                  <div className="register-form__password">
                     <div className="input">
                       <input
                         className="input__field"
                         type="text"
-                        name="password"
-                        placeholder="Create a password"
-                        value={password}
+                        name="username"
+                        placeholder="Username"
+                        value={username}
                         onChange={(event) => {
-                          setPassword(event.target.value);
+                          setUsername(event.target.value);
                         }}
                       />
                       <div className="input__error">
@@ -113,50 +100,69 @@ const Signup = ({ handleToken }) => {
                         </span>
                       </div>
                     </div>
-                    <div className="register-form__password-help">
-                      {errorMessage}
-                    </div>
-                    <div className="register-form__password-help">
-                      {errorMessage2}
-                    </div>
-                  </div>
-                  <button
-                    className="button button_fill button_medium"
-                    type="submit"
-                    value="Register"
-                  >
-                    Sign up
-                  </button>
-                </form>
-                <div className="page__additional">
-                  <Link to={`/login`}>Already have an account? Log in.</Link>
-                </div>
-                <div className="page__info">
-                  <div>
-                    <h3>
-                      <span>You can use social accounts to sign up :</span>
-                    </h3>
-                  </div>
-                  <div>
-                    <div className="social-accounts-auth-block">
-                      <div className="social-accounts-auth-block__link social-accounts-auth-block__link_facebook">
-                        <span className="">Continue with Facebook</span>
+                    <div className="register-form__password">
+                      <div className="input">
+                        <input
+                          className="input__field"
+                          type="text"
+                          name="password"
+                          placeholder="Create a password"
+                          value={password}
+                          onChange={(event) => {
+                            setPassword(event.target.value);
+                          }}
+                        />
+                        <div className="input__error">
+                          <span className="error error_field">
+                            {errorMessage}
+                          </span>
+                        </div>
                       </div>
-                      <div className="social-accounts-auth-block__link social-accounts-auth-block__link_twitter">
-                        <span className="">Continue with Twitter</span>
+                      <div className="register-form__password-help">
+                        {errorMessage}
+                      </div>
+                      <div className="register-form__password-help">
+                        {errorMessage2}
+                      </div>
+                    </div>
+                    <button
+                      className="button button_fill button_medium"
+                      type="submit"
+                      value="Register"
+                    >
+                      Sign up
+                    </button>
+                  </form>
+                  <div className="page__additional">
+                    <Link to={`/login`}>Already have an account? Log in.</Link>
+                  </div>
+                  <div className="page__info">
+                    <div>
+                      <h3>
+                        <span>You can use social accounts to sign up :</span>
+                      </h3>
+                    </div>
+                    <div>
+                      <div className="social-accounts-auth-block">
+                        <div className="social-accounts-auth-block__link social-accounts-auth-block__link_facebook">
+                          <span className="">Continue with Facebook</span>
+                        </div>
+                        <div className="social-accounts-auth-block__link social-accounts-auth-block__link_twitter">
+                          <span className="">Continue with Twitter</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div>
-              <div className="page__footer-agreement">
-                "By signing up, you agree to RAWG’s Terms of Service and Privacy
-                Policy".
+              <div>
+                <div className="page__footer-agreement">
+                  "By signing up, you agree to RAWG’s Terms of Service and
+                  Privacy Policy".
+                </div>
               </div>
-            </div>
-          </main>
+            </main>
+          </div>
         </div>
       </div>
     </div>

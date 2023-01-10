@@ -1809,7 +1809,7 @@ button {
   border-color: transparent;
 }
 .content_columns-1-2 > div:last-child {
-  width: 800px;
+  width: 500px;
 }
 .page_secondary .page__info {
   display: -webkit-box;
@@ -1973,6 +1973,7 @@ h3 {
 
 .decalage {
   margin-right: 90px;
+  padding-right: 200px;
 }
 .discover-games-list__controls {
   display: -webkit-box;
@@ -2462,5 +2463,72 @@ h2 {
     line-height: 48px;
     font-weight: 400;
     padding-left: 90px;
+  }
+
+  .page__content {
+    box-sizing: border-box;
+    display: 0px;
+    flex-direction: column;
+    flex-grow: 0;
+    width: 250px auto;
+  }
+
+  .page__content2 {
+    box-sizing: border-box;
+    display: 0px;
+    flex-direction: column;
+    flex-grow: 0;
+    width: 250px;
+  }
+
+  .content {
+    width: 100px min-content;
+    justify-content: 0 auto;
+  }
+
+  .content_fullsize {
+    flex-grow: 1;
+  }
+  .content_position-center {
+    justify-content: baseline;
+    align-items: flex-end;
+  }
+
+  .down {
+    margin-right: 0;
+  }
+
+  .page_secondary .page__footer-agreement {
+    text-align: center;
+    margin-top: 10px;
+    padding-right: 0px;
+    padding-left: 70px;
+    margin-left: 100px;
+    line-clamp: 100px;
+  }
+
+  .content_columns-1-2 > div:last-child {
+    width: 400px;
+  }
+
+  .page_secondary .page__info {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 70px;
+    padding-left: 110px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
   }
 }
