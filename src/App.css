@@ -2409,7 +2409,7 @@ h2 {
 
   .align {
     margin: 20px auto;
-    max-width: 200px min-content;
+    max-width: 250px min-content;
   }
 
   .heading_12 {
@@ -2425,5 +2425,42 @@ h2 {
     flex-grow: 1;
     min-height: 100%;
     width: 450px;
+  }
+
+  .videohelp {
+    height: 250px;
+    width: 400px;
+    margin-left: 60px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+
+  .game__about {
+    margin-top: 32px;
+    margin-left: 90px;
+  }
+
+  .game__screenshots {
+    padding-left: 50px;
+  }
+
+  .game__screenshots-item {
+    position: relative;
+    margin-top: 15px;
+    width: 400px;
+    height: 290px;
+    border-radius: 6px;
+    background: hsla(0, 0%, 100%, 0.05);
+    cursor: pointer;
+    overflow: hidden;
+    margin-right: 8px;
+    object-fit: cover;
+  }
+
+  .heading_2 {
+    font-size: 44px;
+    line-height: 48px;
+    font-weight: 400;
+    padding-left: 90px;
   }
 }
